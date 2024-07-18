@@ -1,6 +1,6 @@
 package in.onvtech.project;
 
-import org.hibernate.mapping.List;
+import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -41,6 +41,12 @@ public class ProjectApplication {
 		user2.setPhone("1234567890");
 
 	
+		List<User> users =  List.of(user1,user2);
+		Iterable<User> result = userRepo.saveAll(users);
+		result.forEach(user -> {
+			System.out.println(user);
+		});
+
 
 
 
