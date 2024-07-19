@@ -1,6 +1,7 @@
 package in.onvtech.project.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,12 @@ public class MyController {
         return "user";
     }
 
+    @GetMapping("user_view/{id}")
+    public String userView() {
+
+        return "user";
+    }
+
     @PostMapping("/user_add")
     public String userAdd() {
 
@@ -35,7 +42,7 @@ public class MyController {
         return "user";
     }
 
-    @GetMapping("user_delete/{id}")
+        @DeleteMapping("user_delete/{id}")
     public String userDelete() {
 
         return "user";
