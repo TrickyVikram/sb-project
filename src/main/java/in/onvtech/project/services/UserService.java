@@ -15,6 +15,12 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
+   public  String getAllUsers(){
+
+    return "user";
+
+   }
+
     public User saveUser(User user) {
         return userRepo.save(user);
     }
