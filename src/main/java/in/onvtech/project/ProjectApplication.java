@@ -48,11 +48,10 @@ public class ProjectApplication {
 		// });
 
 		// get all in byname   data from database
-	    List<User>  findByName = userRepo.findByName("Vikram1");
-		findByName.forEach(user -> {
-			System.out.println(user);
-		});
-
+	    // List<User>  findByName = userRepo.findByName("Vikram1");
+		// findByName.forEach(user -> {
+		// 	System.out.println(user);
+		// });
 
 
 		
